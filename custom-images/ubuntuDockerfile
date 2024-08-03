@@ -1,0 +1,12 @@
+FROM ubuntu:24.04
+
+# RUN is used to run some commands while building the images
+RUN ["apt-get", "update"]
+# or RUN apt-get update shell command
+
+#ENV
+# used to set environment variables
+# helps to pass values inside the container
+# we can override the values in env by providing those in cli command
+# these values are persistent
+ENV MYSQL_ROOT_PASSWORD=Wasti786@

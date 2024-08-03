@@ -1,0 +1,8 @@
+FROM ubuntu:22.04
+# docker container run -d --name nginx-demo -v nginx-data:/usr/share/nginx/html -p8090:80 nginx
+# docker container run -d --name <container-name> -v <volume-name>:<container-path-for-volume> -p<port-forwarding> <image-name>
+# (ie in container which path to mont)
+# once a volume is attached to a container it cannot be detached
+# to stop changing volume from inside a container we can mark it as read-only
+# i.e., docker container run -d --name nginx-demo -v nginx-data:/usr/share/nginx/html:ro -p8090:80 nginx
+# if the volume specified during image creation
