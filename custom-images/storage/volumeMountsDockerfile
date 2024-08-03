@@ -5,4 +5,9 @@ FROM ubuntu:22.04
 # once a volume is attached to a container it cannot be detached
 # to stop changing volume from inside a container we can mark it as read-only
 # i.e., docker container run -d --name nginx-demo -v nginx-data:/usr/share/nginx/html:ro -p8090:80 nginx
-# if the volume specified during image creation
+# if the volume specified during image creation is not created already, it will be created then
+# docker container run -d --name nginx-demo -v nginx-store:/usr/share/nginx/html:ro -p8090:80 nginx
+# --> Here nginx-store will be created
+
+# creating jenkins image with volume tied to `jenkins-data` volume mount
+# docker container run -d --name jenkins-server -p8090:8080 -v jenkins-data:/var/jenkins_home jenkins/jenkins:latest
